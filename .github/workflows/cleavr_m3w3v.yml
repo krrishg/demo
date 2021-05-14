@@ -1,0 +1,6 @@
+{% embed './_githubWorkflow.edge' with {'artifactPath': 'dist/'} %}
+  {% block buildApp %}
+      - name: Build site
+        run: npm run generate --fail-on-error
+  {% endblock %}
+{% endembed %}
